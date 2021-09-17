@@ -22,24 +22,6 @@
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
     <title>Elie Moriceau</title>
-
-    <script src="https://smtpjs.com/v3/smtp.js">
-    </script>
-
-    <!-- <script type="text/javascript">
-        function sendEmail() {
-            Email.send({
-                SecureToken: "b8dd2e7c-7490-4ac5-be30-675f90b01638",
-                To: 'elie@moriceau.dev',
-                From: document.getElementById(email).value,
-                Subject: document.getElementById(obj).value,
-                Body: document.getElementById(msg).value
-            })
-                .then(function (message) {
-                    alert("mail sent successfully")
-                });
-        }
-    </script> -->
 </head>
 
 <body class="bg-blue-300 font-sans">
@@ -79,7 +61,10 @@
         </div>
         <div id="me" class="grid grid-cols-1 sm:grid-cols-2 gap-2 h-screen">
             <div class="flex flex-col justify-center text-center gap-6 px-2">
-                <p class="text-2xl font-semibold playfair lg:text-3xl lg:font-bold typing">Hi, I'm Elie. Student at Epitech in PreMsc.</p>
+                <p class="text-2xl font-semibold playfair lg:text-3xl lg:font-bold lg:leading-10">
+                    Hi, I'm Elie. Student at Epitech in PreMsc.<br>
+                    Currently looking for an internship from December 20, 2021.
+                </p>
                 <div class="hidden sm:block h-px bg-yellow-300 my-1"></div>
                 <div class="bg-gray-50 p-2 rounded-lg hidden sm:block mx-auto min-h-30 md:pt-2">
                     <img src="https://ghchart.rshah.org/409ba5/2016rshah" alt="2016rshah's Blue Github Chart" />
@@ -98,8 +83,7 @@
                 </div>
             </div>
             <div class=" flex justify-center items-center">
-                <img src="./icon/me.png" alt="picture of me"
-                    class="w-full h-auto rounded-full py-10 px-3 max-h-96 max-w-sm">
+                <img src="./icon/me.png" alt="picture of me" class="w-full h-auto rounded-full  max-h-96 max-w-sm">
             </div>
         </div>
         <section id="aboutMe" class="bg-red-400 min-h-screen">
@@ -348,7 +332,7 @@
                 </svg>
             </div>
             <h2 class="text-3xl font-bold text-center">contact</h2>
-            <form class="flex flex-col">
+            <div class="flex flex-col">
                 <div class="mx-10 max-w-full sm:max-w-sm md:max-w-lg">
                     <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
                     <div class="mt-1 relative rounded-md shadow-sm">
@@ -375,9 +359,11 @@
                     </div>
                 </div>
                 <div class="flex my-2 justify-center">
-                    <input type="submit" value="Send Email" class="px-4 py-2 rounded-lg shadow ring-current">
+                    <a href="mailto:emoriceaufa@gmail.com">
+                        <input type="button" value="Send Email" class="px-4 py-2 rounded-lg shadow ring-current">
+                    </a>
                 </div>
-            </form>
+            </div>
         </section>
     </main>
 </body>
