@@ -10,14 +10,43 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
         integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300;0,400;0,500;0,600;0,800;1,300;1,500;1,700;1,800&display=swap"
+        rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
     <title>Elie Moriceau</title>
+
+    <script src="https://smtpjs.com/v3/smtp.js">
+    </script>
+
+    <!-- <script type="text/javascript">
+        function sendEmail() {
+            Email.send({
+                SecureToken: "b8dd2e7c-7490-4ac5-be30-675f90b01638",
+                To: 'elie@moriceau.dev',
+                From: document.getElementById(email).value,
+                Subject: document.getElementById(obj).value,
+                Body: document.getElementById(msg).value
+            })
+                .then(function (message) {
+                    alert("mail sent successfully")
+                });
+        }
+    </script> -->
 </head>
 
-<body class="bg-green-300">
+<body class="bg-blue-300 font-sans">
     <header class="bg-gray-200">
         <nav class="flex flex-col sm:flex-row justify-between items-center px-2">
             <a href="#" class="flex">
-                <h1 class="text-2xl">Elie Moriceau</h1>
+                <h1 class="text-3xl font-bold">Elie Moriceau</h1>
             </a>
             <div class="flex justify-end mr-2">
                 <a href="#aboutMe" class="m-4 text-xl">
@@ -31,17 +60,38 @@
                 </a>
             </div>
         </nav>
+
     </header>
     <main>
+        <div class="custom-shape-divider-top-1631878040">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                preserveAspectRatio="none">
+                <path
+                    d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
+                    opacity=".25" class="shape-fill"></path>
+                <path
+                    d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z"
+                    opacity=".5" class="shape-fill"></path>
+                <path
+                    d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"
+                    class="shape-fill"></path>
+            </svg>
+        </div>
         <div id="me" class="grid grid-cols-1 sm:grid-cols-2 gap-2 h-screen">
             <div class="flex flex-col justify-center text-center gap-6 px-2">
-                <p class="text-2xl">Hi, I’m Sean. I’m a marketer that likes driving ideas into market.</p>
-                <div class="flex justify-evenly	">
-                    <a href="https://github.com/eliemoriceau" target="_blank">
+                <p class="text-2xl font-semibold playfair lg:text-3xl lg:font-bold typing">Hi, I'm Elie. Student at Epitech in PreMsc.</p>
+                <div class="hidden sm:block h-px bg-yellow-300 my-1"></div>
+                <div class="bg-gray-50 p-2 rounded-lg hidden sm:block mx-auto min-h-30 md:pt-2">
+                    <img src="https://ghchart.rshah.org/409ba5/2016rshah" alt="2016rshah's Blue Github Chart" />
+                </div>
+                <div class="hidden sm:block h-px bg-yellow-300 my-1"></div>
+                <div class="flex justify-evenly	md:pt-2">
+                    <a href="https://github.com/eliemoriceau" target="_blank" class="text-xl">
                         <i class="fab fa-github"></i>
                         <span>Github</span>
                     </a>
-                    <a href="https://www.linkedin.com/in/elie-moriceau-farinet-339b18166/" target="_blank">
+                    <a href="https://www.linkedin.com/in/elie-moriceau-farinet-339b18166/" target="_blank"
+                        class="text-xl">
                         <i class="fab fa-linkedin"></i>
                         <span>linkedin</span>
                     </a>
@@ -52,7 +102,16 @@
                     class="w-full h-auto rounded-full py-10 px-3 max-h-96 max-w-sm">
             </div>
         </div>
-        <section id="aboutMe" class="bg-red-300 min-h-screen">
+        <section id="aboutMe" class="bg-red-400 min-h-screen">
+
+            <div class="custom-shape-divider-top-1631873910">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                    preserveAspectRatio="none" class="">
+                    <path
+                        d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                        class="shape-fill"></path>
+                </svg>
+            </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-20 sm:gap-48 py-4 px-4">
                 <div class="flex flex-col">
                     <h4 class="text-2xl mb-4 sm:mb-6 font-bold text-center">Experiance and Education</h4>
@@ -209,8 +268,15 @@
                 </div>
             </div>
         </section>
-        <section id="project" class="bg-blue-300 pb-4 text-center">
-            <h3 class="text-2xl py-4 fony-bold"> My Project</h3>
+        <section id="project" class="bg-green-300 pb-4 text-center">
+            <div class="custom-shape-divider-top-1631874538">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                    preserveAspectRatio="none">
+                    <path d="M0,0V7.23C0,65.52,268.63,112.77,600,112.77S1200,65.52,1200,7.23V0Z" class="shape-fill">
+                    </path>
+                </svg>
+            </div>
+            <h3 class="text-3xl font-bold text-center py-2"> My Project</h3>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 text-center gap-2">
                 <a href="https://github.com/eliemoriceau/jam1-2020-gogo" target="_blank"
                     class="container w-80 mx-auto bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transform hover:scale-105 duration-500 hover:my-4">
@@ -272,14 +338,23 @@
             </div>
         </section>
         <section id="contact" class="bg-yellow-200 pb-4">
+            <div class="custom-shape-divider-top-1631874671 h-10">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                    preserveAspectRatio="none">
+                    <rect x="1200" height="3.6"></rect>
+                    <rect height="3.6"></rect>
+                    <path d="M0,0V3.6H580.08c11,0,19.92,5.09,19.92,13.2,0-8.14,8.88-13.2,19.92-13.2H1200V0Z"
+                        class="shape-fill"></path>
+                </svg>
+            </div>
             <h2 class="text-3xl font-bold text-center">contact</h2>
-            <div class="flex flex-col">
+            <form class="flex flex-col">
                 <div class="mx-10 max-w-full sm:max-w-sm md:max-w-lg">
                     <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
                     <div class="mt-1 relative rounded-md shadow-sm">
                         <input type="text" name="email" id="email"
                             class="focus:ring-indigo-500 focus:border-indigo-500 block w-full pl-7 pr-12 sm:text-sm border-gray-300 rounded-md"
-                            placeholder="test@test.com">
+                            placeholder="test@test.com" required>
                     </div>
                 </div>
                 <div class="mx-10 max-w-full sm:max-w-sm md:max-w-lg">
@@ -287,7 +362,7 @@
                     <div class="mt-1 relative rounded-md shadow-sm">
                         <input type="text" name="obj" id="obj"
                             class="focus:ring-indigo-500 focus:border-indigo-500 block w-full pl-7 pr-12 sm:text-sm border-gray-300 rounded-md"
-                            placeholder="">
+                            placeholder="" required>
                     </div>
                 </div>
                 <div class="mx-10 max-w-screen">
@@ -295,14 +370,16 @@
                     <div class="mt-1 relative rounded-md shadow-sm">
                         <textarea name="msg" id="msg"
                             class="focus:ring-indigo-500 focus:border-indigo-500 block w-full pl-7 pr-12 sm:text-sm border-gray-300 rounded-md"
-                            rows="10" placeholder="Your mesage">
+                            rows="10" placeholder="Your mesage" required>
                         </textarea>
                     </div>
                 </div>
-            </div>
+                <div class="flex my-2 justify-center">
+                    <input type="submit" value="Send Email" class="px-4 py-2 rounded-lg shadow ring-current">
+                </div>
+            </form>
         </section>
     </main>
-
 </body>
 
 </html>
